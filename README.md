@@ -293,6 +293,10 @@ Any new resource generated should have its mock inside this module.
     --type=pre
     --ver=1.2.3 // specific version
 
+## License
+
+MIT © [Hexacta](http://www.hexacta.com)
+
 **Generated based in John Papa HotTowel**
 
 >*Opinionated Angular style guide for teams by [@john_papa](//twitter.com/john_papa)*
