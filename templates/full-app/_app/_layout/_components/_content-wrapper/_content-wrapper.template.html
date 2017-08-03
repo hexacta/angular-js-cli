@@ -1,0 +1,32 @@
+<div ng-show="$ctrl.user" id="page-wrapper" ng-class="{'open': $ctrl.toggle}" ng-cloak>
+
+    <sidemenu ng-if="$ctrl.user" toggle-sidebar="$ctrl.toggleSidebar()" logout="$ctrl.logOut()" restricted-screens="$ctrl.user.restrictedScreens"></sidemenu>
+
+    <div id="content-wrapper" ng-if="$ctrl.allowAccess()">
+        <div class="page-content">
+
+            <nav-header screen-title="{{$ctrl.getTitle()}}" user="$ctrl.user" logout="$ctrl.logOut()" go-back="$ctrl.goBack()"></nav-header>
+
+            <!-- Main Content -->
+            <div class="row">
+                <div class="col-lg-12" ui-view>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Page Content -->
+    </div>
+    <!-- End Content Wrapper -->
+
+    <div ng-if="!$ctrl.allowAccess()" class="restricted-access">
+        <rd-widget>
+
+            <rd-widget-header>
+                <h4>Access Denied</h4>
+            </rd-widget-header>
+
+        </rd-widget>
+    </div>
+
+</div>
+<!-- End Page Wrapper -->

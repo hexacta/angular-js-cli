@@ -1,0 +1,39 @@
+<rd-widget>
+
+    <rd-widget-header>
+        <h4 class="pull-left">Friends</h4>
+        <button class="btn btn-primary btn-shadow pull-right" type="button" ng-click="$ctrl.openModal()">
+                    Add new
+                    </button>
+        <div class="clearfix"></div>
+    </rd-widget-header>
+
+    <rd-widget-body loading="!$ctrl.friends.$resolved && !$ctrl.friends.length">
+        <div class="row" ng-if="$ctrl.friends.$resolved && !$ctrl.friends.length">No friends</div>
+        <div class="row list-header" ng-if="$ctrl.friends.length">
+            <div class="col-sm-5ths">
+                Friend's Name
+            </div>
+            <div class="col-sm-5ths">
+                First Name
+            </div>
+            <div class="col-sm-5ths">
+                Last Name
+            </div>
+            <div class="col-sm-5ths">
+                Group
+            </div>
+            <div class="col-sm-5ths">
+                
+            </div>
+        </div>
+        <div class="row list-content">
+            <friend-list-item  ng-repeat="friendItem in $ctrl.friends" class="row"
+            friend="friendItem"
+            edit-friend="$ctrl.openModal(friend)"
+            remove-friend="$ctrl.removeFriend(friend)">
+            </friend-list-item>
+        </div>
+    </rd-widget-body>
+
+</rd-widget>

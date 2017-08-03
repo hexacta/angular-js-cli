@@ -1,0 +1,49 @@
+<form role="form" name="$ctrl.friendForm" novalidate class="form-horizontal">
+    <rd-widget>
+
+        <rd-widget-header>
+            <h4>Friend Form</h4>
+        </rd-widget-header>
+
+        <rd-widget-body>
+            <div class="row">
+                <div class="col-{{$ctrl.isModal ? 'lg' : 'md'}}-6">
+                    <div class="form-group">
+                        <label for="key" class="col-sm-4 control-label">Friend Name</label>
+                        <div class="col-sm-8">
+                            <div class="has-feedback">
+                                <input class="form-control" name="name" required ng-model="$ctrl.friend.name" type="text"/>
+                            </div>
+                            <div class="messages-no-margin" ng-messages="$ctrl.friendForm.name.$error" ng-if="$ctrl.friendForm.name.$touched" role="alert">
+                                <div ng-message="required">Invalid friend name</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-{{$ctrl.isModal ? 'lg' : 'md'}}-6">
+                    <div class="form-group">
+                        <label for="key" class="col-sm-4 control-label">Group</label>
+                        <div class="col-sm-8">
+                            <ui-select spinner-enabled="true" ng-model="$ctrl.friend.group" theme="bootstrap" name="group">
+                                <ui-select-match placeholder="{{$ctrl.groups.length ? 'Select or search the list...' : 'Loading...'}}" allow-clear="false">
+                                    {{$select.selected.name}}
+                                </ui-select-match>
+                                <ui-select-choices repeat="group.name as group in $ctrl.groups | filter: $select.search">
+                                    <div ng-bind-html="group.name | highlight: $select.search"></div>
+                                </ui-select-choices>
+                            </ui-select>
+
+                        </div>
+                    </div>
+                </div>
+        </rd-widget-body>
+
+        <rd-widget-footer>
+            <div class="col-lg-12">
+                <button ng-disabled="!$ctrl.friendForm.$valid" class="btn btn-primary btn-shadow pull-right" type="button" ng-click="$ctrl.saveFriend()">Save</button>
+                <button ng-if="$ctrl.cancel" class="btn btn-danger btn-shadow pull-right btn-cancel" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+            </div>
+        </rd-widget-footer>
+
+    </rd-widget>
+</form>

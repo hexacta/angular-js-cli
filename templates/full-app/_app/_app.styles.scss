@@ -1,0 +1,14 @@
+$primary-color: #0aac8e!default;
+$secondary-color: rgba(233, 157, 26, 0.35)!default;
+$lightred: rgba(255, 0, 0, .15)!default;
+
+//scss
+@import "common/common.styles";
+@import "core/core.styles";
+@import "layout/layout.styles";
+        /* replace:session */
+@import "session/session.styles";
+        /* endreplace:session */
+        /* replace:friends */
+@import "friends/friends.styles";
+        /* endreplace:friends */

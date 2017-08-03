@@ -1,0 +1,90 @@
+.login-container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	min-width: 100%;
+	min-height: 100%;
+
+	.form-signin {
+		max-width: 330px;
+		margin: 100px auto;
+		background: #fff;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+
+		.form-signin-heading {
+			margin: 0;
+			padding: 25px 15px;
+			text-align: center;
+			color: #fff;
+			position: relative;
+		}
+
+		.login-wrap {
+			padding: 20px;
+			position: relative;
+		}
+
+		.login-input{
+			margin-bottom: 25px;
+
+			input[type="text"], input[type="password"] {
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				border: 1px solid #eaeaec;
+				background: #eaeaec;
+				box-shadow: none;
+				font-size: 12px;
+			}
+		}
+
+		img{
+			max-width: 80%;
+		}
+
+		.sign-title {
+			font-size: 24px;
+			color: #fff;
+			position: absolute;
+			top: -60px;
+			left: 0;
+			text-align: center;
+			width: 100%;
+			text-transform: uppercase;
+		}
+
+		.bottom-link{
+			color: #c7c7c7;
+			text-align: center;
+			margin-top: 15px;
+		}
+	}
+
+	.auth-disclaimer{
+		color: white;
+		bottom:0;
+
+		.title{
+			border-bottom: 2px solid white;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+
+		@media(min-height: 780px){
+			position: fixed;
+			margin-right: 15px;
+		}
+	}
+
+	div[ng-messages]{
+		position: absolute;
+	}
+
+	.has-error{
+		input{
+			background: $lightred !important;
+			border-color: #843534 !important;
+		}
+	}
+}

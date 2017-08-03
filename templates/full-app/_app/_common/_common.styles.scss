@@ -1,0 +1,22 @@
+.modal-open{
+	.loading-screen-modal{
+		display: flex!important;
+
+		.modal-dialog{
+			flex: 0 1 auto;
+			vertical-align: middle;
+			align-self: center;
+		}
+	}
+
+	.modal-dialog{
+		.modal-content{
+			border-radius: 0;
+			border: none;
+		}
+	}
+}
+
+a[ng-click]{
+    cursor: pointer;
+}

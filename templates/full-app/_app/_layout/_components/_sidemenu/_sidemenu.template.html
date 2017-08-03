@@ -1,0 +1,28 @@
+<nav id="sidebar-wrapper">
+    <ul class="sidebar">
+        <li class="sidebar-main">
+            <a ng-click="$ctrl.toggleSidebar()">
+                <span class="menu-item-title"><div class="title-text">{{$ctrl.appTitle}}</div></span>
+                <span class="menu-icon glyphicon glyphicon-transfer"></span>
+            </a>
+        </li>
+        <li class="sidebar-title"><span>NAVIGATION</span></li>
+
+        <li ui-sref-active="current" class="sidebar-list" ng-if="!$ctrl.hasRestrictedAccess(item)" ng-repeat="item in $ctrl.navRoutes" >
+            <a ui-sref="{{::item.name}}">
+                <span class="menu-item-title">
+                    <div class="title-text">{{::item.title}} </div>
+                </span>
+                <span class="menu-icon fa" ng-class="item.settings.icon" title="{{::item.title}}"></span>
+            </a>
+        </li>
+
+    </ul>
+    <div class="sidebar-footer">
+        <div class="col-xs-4">
+            <a href="" ng-click="$ctrl.logout()">
+                Logout
+            </a>
+        </div>
+    </div>
+</nav>

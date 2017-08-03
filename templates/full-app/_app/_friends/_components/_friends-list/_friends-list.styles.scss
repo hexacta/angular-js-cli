@@ -1,0 +1,21 @@
+friends-list{
+    //implement component's scss styles here
+    color: #666;
+
+    .widget-header{
+        .btn{
+            margin: 15px;
+        }
+    }
+
+    .list-header{
+        border-bottom: 1px solid #333;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+
+        div[class*="col-"]{
+            margin-bottom: 5px;
+        }
+    }
+}

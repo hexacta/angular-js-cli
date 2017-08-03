@@ -1,0 +1,114 @@
+html{
+	min-width: 800px;
+}
+
+body{
+	font-family: Arial !important;
+	font-weight: 700;
+	background: $primary-color no-repeat fixed;
+	background-size: cover;
+	min-height: 100%;
+
+	select.form-control{
+		font-family: inherit;
+	}
+
+	h4{
+		margin-bottom: 15px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+		font-weight: 700;
+	}
+
+	[ng-message]{
+		color: red;
+		font-style: italic;
+		font-size: 13px;
+	}
+
+	input::-ms-clear {
+		width : 0;
+		height: 0;
+	}
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.col-xs-5ths {
+	width: 20%;
+	float: left;
+}
+
+.btn{
+	font-weight: 700 !important;
+	border-radius: 0;
+}
+
+.btn-yellow{
+	color: #333;
+	background: $secondary-color;
+}
+
+input{
+	&.form-control{
+		border-radius: 0;
+	}
+}
+
+.dropdown-menu{
+	border-radius: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+$list: right left center;
+
+ @each $pos in $list{
+	.align-#{$pos}{
+		text-align: $pos;
+	}
+ }
+
+@media (min-width: 768px) {
+	.col-sm-5ths {
+		width: 20%;
+		float: left;
+	}
+
+	.pull-sm-right{
+		float: right;
+	}
+}
+
+@media (min-width: 992px) {
+	.col-md-5ths {
+		width: 20%;
+		float: left;
+	}
+
+	.pull-md-right{
+		float: right;
+	}
+}
+
+@media (min-width: 1200px) {
+	.col-lg-5ths {
+		width: 20%;
+		float: left;
+	}
+
+	.pull-lg-right{
+		float: right;
+	}
+}

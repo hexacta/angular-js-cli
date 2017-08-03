@@ -1,0 +1,84 @@
+@import "components/nav-header/nav-header.styles";
+@import "components/sidemenu/sidemenu.styles";
+
+.restricted-access{
+	padding: 15px;
+}
+
+.section-container{
+	padding: 0 15px 15px 15px;
+}
+
+h4{
+	padding: 10px 0px 0px 15px;
+}
+
+.widget{
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 0;
+	
+	.page-content &{
+		margin-bottom: 15px;
+	}
+
+	.widget-header{
+		color: #333; 
+		background-color: white; 
+		border-bottom: none; 
+
+		h4{
+			padding-left: 0;
+		}
+
+		&.has-right-button{
+			.title{
+				display: inline-block
+			}
+
+			.transcluded{
+				float: right;
+			}
+		}
+	}
+
+	.widget-body{
+
+		&:not(.has-padding){
+			padding: 0 20px 20px 20px;
+		}
+
+		&.no-padding{
+			padding: 0 !important;
+		}
+
+		rd-loading{
+			display: flex;
+			align-items: center;
+
+			.loading{
+				max-width: 40px;
+				max-height: 40px;
+				flex: 1;
+			}
+		}
+
+		button {
+			margin-left: 0;
+		}
+	}
+
+	.widget-footer{
+		display: table;
+		width: 100%;
+		border-top: none;
+	}
+}
+
+.popup-modal{
+	.modal-body{
+		font-size: 16px;
+	}
+}

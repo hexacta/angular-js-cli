@@ -1,0 +1,30 @@
+<div class="row header">
+    <div class="col-xs-12">
+        <div class="user pull-right">
+            <div class="item dropdown" uib-dropdown>
+                <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+                    <img src="img/avatar.jpg"  alt="{{$ctrl.user && $ctrl.user.username}}"  title="{{$ctrl.user && $ctrl.user.username}}">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li class="dropdown-header">{{$ctrl.user && $ctrl.user.username}}
+                    </li>
+                    <li class="divider"></li>
+                    <li class="link">
+                        <a ng-click="$ctrl.logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-default btn-go-back" aria-label="Left Align" ng-click="$ctrl.goBack()">
+            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+        </button>
+        <div class="meta">
+            <div class="page view-title">
+                {{$ctrl.title}}
+            </div>
+            <div class="breadcrumb-links">
+                Home / {{$ctrl.title}}
+            </div>
+        </div>
+    </div>
+</div>

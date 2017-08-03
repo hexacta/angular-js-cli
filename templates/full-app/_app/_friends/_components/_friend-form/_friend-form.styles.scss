@@ -1,0 +1,14 @@
+friend-form{
+    //implement component's scss styles here
+    color: #666;
+}
+
+.modal{
+    friend-form-modal{
+        .widget-footer{
+            .btn.btn-cancel{
+                margin-right: 15px;
+            }
+        }
+    }
+}
