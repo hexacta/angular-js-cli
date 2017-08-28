@@ -36,7 +36,15 @@ gulp.task('generate-angular', function (done) {
  * Interactive Angularjs app generator
  */
 gulp.task('angular-app', function (done) {
-    inquirer.prompt(inquires.generateApp(config.app.defaultDest, fullConfig.defaultAppName, args.first),
+    var name = fullConfig.defaultAppName;
+    var path = config.app.defaultDest;
+    if (args.title){
+        name = args.title;
+    }
+    if (args.path){
+        path = args.path;
+    }
+    inquirer.prompt(inquires.generateApp(path, name, args.first),
         function (answers) {
             if ((!args.first && !answers.continue) || !answers.path || !answers.name) {
                 return;
